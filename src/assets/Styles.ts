@@ -2,12 +2,13 @@ import { StyleSheet } from "react-native";
 
 export const Styles = StyleSheet.create({
     container: {
-        flex: 1,
+        height: "100%",
+        width: "100%",
         alignItems: "center",
         justifyContent: "center"
     },
     imgBack: {
-        flex: 1,
+        // flex: 1,
         height: "100%",
         width: "100%",
         alignItems: "center",
@@ -19,7 +20,6 @@ export const Styles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.5)'
     },
     loginView: {
-        flex: 1,
         alignItems: "center",
         justifyContent: "center"
     }

@@ -1,17 +1,25 @@
-import {Text, TextInput, TouchableOpacity, View} from 'react-native';
+import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 type Props = {
     backgroundColor?: string;
     title?: string;
+    onPress?: () => void;
 }
 
-const Button: React.FC<Props> = ({ backgroundColor, title }) => {
+const Button: React.FC<Props> = ({ backgroundColor, title, onPress }) => {
     return (
-        <TouchableOpacity style={{backgroundColor: backgroundColor, flex: 1, alignItems: "center", justifyContent: "center"}}>
-            <Text style={{fontWeight: "bold", fontSize: 20, marginBottom: "2%"}}>{title}</Text>
+        <TouchableOpacity style={{
+            height: "100%",
+            width: "100%",
+            backgroundColor: backgroundColor,
+            alignItems: "center",
+            justifyContent: "center",
+            elevation: 5
+        }}
+            onPress={onPress}>
+            <Text style={{ fontWeight: "bold", fontSize: 18 }}>{title}</Text>
         </TouchableOpacity>
     );
- }
+}
 
- export default Button;
- 
+export default Button;
